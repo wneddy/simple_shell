@@ -16,5 +16,7 @@
 
 /* prototype functions */
 char *get_input(void);
+void exit_command(char **token, char *line, int done);
+void env_check(char **env_var);
 
 #endif
