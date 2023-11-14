@@ -19,4 +19,11 @@ char *get_input(void);
 void exit_command(char **token, char *line, int done);
 void env_check(char **env_var);
 
+/* string prototype functions */
+int str_cmp(char *str1, char *str2);
+int str_len(char *s);
+size_t str_bytecmp(char *str1, char *str2, size_t nmbr);
+char *str_cat(char *to, char *from);
+char *str_cpy(char *to, char *from);
+
 #endif
