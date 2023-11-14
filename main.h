@@ -25,6 +25,7 @@ int path_handler(char **token, char **env_var);
 char **tokenizer(char *args);
 unsigned int delimeter_check(char ch, const char *s);
 char *str_tok(char *s, const char *mark);
+void cd_func(char **input, char *prog_nm);
 
 /* string prototype functions */
 int str_cmp(char *str1, char *str2);
