@@ -1,9 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define EXIT WIFEXITED
-#define STATUS WEXITSTATUS
-
+/*libraries*/
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -14,10 +12,16 @@
 #include <sys/stat.h>
 #include <limits.h>
 
+/* definations */
+#define EXIT WIFEXITED
+#define STATUS WEXITSTATUS
+
 /* prototype functions */
 char *get_input(void);
 void exit_command(char **token, char *line, int done);
 void env_check(char **env_var);
+char *get_path(char **env);
+int path_handler(char **token, char **env_var);
 
 /* string prototype functions */
 int str_cmp(char *str1, char *str2);
@@ -29,5 +33,9 @@ int func_atoi(char *str);
 void func_itoa(int p, char *s, int station);
 void str_rev(char *s);
 char *str_dup(const char *s);
+
+/* printing prototype function */
+int puts_(char *s);
+int putchar_(char ch);
 
 #endif
