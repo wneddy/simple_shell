@@ -28,7 +28,7 @@ int putchar_(char ch)
  * @s: string.
  * Return: numbers of characters printed
  */
-int puts_(char *str)
+int puts_(char *s)
 {
 	register int a;
 

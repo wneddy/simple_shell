@@ -50,9 +50,9 @@ int str_len(char *s)
  */
 size_t str_bytecmp(char *str1, char *str2, size_t nmbr)
 {
-	size_t counter, check;/* check - for comparison*/
+	size_t counter, check;
 
-	for (counter = 0; str1[counter] != '\0' && counter < n; counter++)
+	for (counter = 0; str1[counter] != '\0' && counter < nmbr; counter++)
 	{
 		check = str1[counter] - str2[counter];
 

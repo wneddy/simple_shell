@@ -70,7 +70,7 @@ void echo_check(char **input, int check_exit, char **env_var)
 			puts_(" ");
 		if (!str_cmp(input[k], "$?"))
 		{
-			write(1, exit_str, _strlen(exit_str));
+			write(1, exit_s, str_len(exit_s));
 			continue;
 		}
 		if (!str_cmp(input[k], "$$"))
@@ -146,13 +146,13 @@ void unset_env(char **tok_command)
 		puts_("unsetenv: Too few arguments \n");
 		return;
 	}
-	if (input_toks[2] != NULL)
+	if (tok_command[2] != NULL)
 	{
 		puts_("unsetenv: Too many arguments \n");
 		return;
 	}
 
-	tare = unsetenv(tok_commmand[1]);
+	tare = unsetenv(tok_command[1]);
 
 	if (tare != 0)
 		perror("unsetenv");

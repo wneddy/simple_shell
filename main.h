@@ -20,7 +20,7 @@
 char *get_input(void);
 void exit_command(char **token, char *line, int done);
 void env_check(char **env_var);
-char *get_path(char **env);
+char *path_finder(char **env_var);
 int path_handler(char **token, char **env_var);
 char **tokenizer(char *args);
 unsigned int delimeter_check(char ch, const char *s);

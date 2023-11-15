@@ -16,7 +16,7 @@ void exit_command(char **token, char *line, int done)
 		free(token);
 		exit(done);
 	}
-	status = _atoi(token[1]); /* should write own function */
+	status = func_atoi(token[1]);
 	free(line);
 	free(token);
 	exit(status);
@@ -32,7 +32,7 @@ void env_check(char **env_var)
 
 	while (env_var[objects])
 	{
-		write(STDOUT_FILENO, env_var[objects], str_len(env_var[ojects]));
+		write(STDOUT_FILENO, env_var[objects], str_len(env_var[objects]));
 		write(STDOUT_FILENO, "\n", 1);
 		objects++;
 	}

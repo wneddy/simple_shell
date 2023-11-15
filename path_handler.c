@@ -64,7 +64,7 @@ int path_handler(char **token, char **env_var)
 			return (0);
 		}
 		free(loc_new);
-		token = str_tok(NULL, ":");
+		command = str_tok(NULL, ":");
 	}
 	free(value);
 	return (-1);
