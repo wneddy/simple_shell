@@ -32,6 +32,9 @@ void replacement_check(char **input, int check_exit);
 void echo_check(char **input, int check_exit, char **env_var);
 int support_func(char **input, char *variable, int check_exit,
                  char **env_var, char *args);
+int exe_func(char **input, char **args, char **env_var, char *command, int loc_output,
+             int pid);
+void output_err(char *identifier, int pid, char *input);
 
 /* string prototype functions */
 int str_cmp(char *str1, char *str2);
